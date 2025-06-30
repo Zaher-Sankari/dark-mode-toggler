@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+header{
+    height: 100vh;
+    display: flex;
+    background: #f1f5f9;
+    transition: all .5s ease-in-out;
+}
+svg{
+    color: #1e293b;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 128px;
+    flex-grow: 1;
+    position: relative;
+
+    .image{
+        width: 360px;
+        img{
+            border-radius: 8px;
+            width: 100%;
+        }
+        .toggle{
+            display: flex;
+            margin-bottom:10px;
+            position: absolute;
+            top: 40px;
+            right: 128px;
+
+            svg{
+                font-size: 35px;
+            }
+        }
+    }
+}
+.info{
+    width: 360px;
+    p{
+        font-size: 16px;
+        color:#6b7280;
+        font-weight: 400;
+    }
+    h1{
+        color: #f97316;
+        font-size: 48px;
+        font-weight: 800;
+    }
+    .description{
+        font-size: 20px;
+        font-weight: 400;
+        color: #1e293b;
+        margin-top: 20px;
+    }
+    .logos{
+        margin-block: 16px;
+
+        svg{
+        font-size: 20px;
+        margin-right: 12px;
+    }
+}
+}
+.dark{
+    background-color: #1e293b;
+    h1,p,svg,.description{
+        color: white;
+    }
+}
+@media screen and (max-width:992px){
+    .container{
+        padding-left: 50px;
+        padding-right: 50px;
+    } 
+    .container .image .toggle{
+        right: 50px;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+        justify-content: normal;
+        gap: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .container .image .toggle{
+        right: 40px;
+        top: 25px;
+    }
+    .container .info{
+        width: 100%;
+    }
+    .container .image{
+        width: 100%;
+    }
+}
+@media screen and (max-width:380px){
+    .info {
+        h1{
+            font-size: 36px;
+        }
+        .description{
+            font-size: 16px;
+        }
+    }
+    .container .image .toggle svg{
+        font-size: 24px;
+    }
+}
